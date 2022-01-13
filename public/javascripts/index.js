@@ -18,14 +18,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 window.onscroll = function(ev) {
   if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-    let item = document.querySelector('[id^="gb-widget-"]');
-    item.style.bottom = "80px";
+    let item = document.querySelector('[class^="i-whatsapp-container"]');
+    item.style.bottom = "70px";
     item.style.zIndex = "1";
     let item2 = document.querySelector('[class^="i-top-container"]');
     item2.style.bottom = "80px";    
   } else {
-    let item = document.querySelector('[id^="gb-widget-"]');
-    item.style.bottom = "21px";
+    let item = document.querySelector('[class^="i-whatsapp-container"]');
+    item.style.bottom = "15px";
     item.style.zIndex = "1";
     let item2 = document.querySelector('[class^="i-top-container"]');
     item2.style.bottom = "21px";
