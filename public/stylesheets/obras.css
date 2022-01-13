@@ -1,0 +1,82 @@
+.nav {
+  padding-left: 10% !important;
+}
+
+/* .nav-link{
+  padding: 0.5rem 8rem !important;
+} */
+
+button[role="tab"]{
+  padding: 0.5rem 11rem !important;
+}
+
+div[role="tabpanel"]{
+  padding: 2rem;
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.obra-item{
+  /* max-width: 300px;
+  max-height: 200px; */
+  position: relative;
+  margin-bottom: 3%;
+  max-width: 30%;
+}
+
+.obra-item:hover .info-tag{
+  background-color: rgba(82, 82, 82, 0.93);
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+.obra-item:hover p{
+  color: white;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+.obra-item:hover p:first-child{
+  color: #00A2E8;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+.obra-item:after {
+  content: '\A';
+  position: absolute;
+  width: 100%; height:100%;
+  top:0; left:0;
+  background:rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+.obra-item:hover:after {
+  opacity: 1;
+}
+
+.info-tag{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 5%;
+  background-color: rgba(239, 239, 239, 0.93);
+  width: 60%;
+  padding: 5%;
+  z-index: 2;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+}
+
+.info-tag p{
+  font-size: 15px;
+  margin:auto;
+}
+
+.info-tag p:first-child{
+  font-weight: 800;
+}

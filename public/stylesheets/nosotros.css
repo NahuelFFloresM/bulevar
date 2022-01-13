@@ -1,0 +1,25 @@
+.carousel {
+  margin-bottom: 0rem !important;
+}
+
+.featurette-divider{
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.i-data{
+  width: 60px;
+  height: auto;
+  float: left;
+  color:#00A2E8;
+  margin-right: 10px;
+}
+
+.data-number{
+  font-weight: 500;
+}
+
+.img-fluid{
+  width: 100%;
+  height: auto;
+}
