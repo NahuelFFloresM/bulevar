@@ -1,6 +1,5 @@
 'use strict';
 
-
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -30,6 +29,7 @@ mongoose.connect(process.env.DB_MONGO_URI, {useNewUrlParser: true, useUnifiedTop
 var app = express();
 
 app.use(helmet());
+app.use(express.static(__dirname + '/node_modules/bootstrap/dist'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -44,6 +44,10 @@ app.use(express.static(path.join(__dirname, '/')));
 
 app.use(compression());
 
+// app.use(function (req, res, next) {
+//   res.set('Content-Security-Policy', 'frame-src https://maps.google.com/maps/embed/');
+//   next();
+// });
 
 app.use('/', indexRouter);
 app.use('/obras', obrasRouter);

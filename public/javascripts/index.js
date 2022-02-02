@@ -1,4 +1,5 @@
-const gotopbutton = document.getElementById("btn-to-top");
+let gotopbutton = document.getElementById("btn-to-top");
+
 
 document.addEventListener("DOMContentLoaded", function() {
   
@@ -13,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let item = document.querySelector('.contacto-container');
     item.style.right = '-40%';
   })
-
 });
 
 window.onscroll = function(ev) {
@@ -32,13 +32,15 @@ window.onscroll = function(ev) {
   }
 
   if (
-    document.body.scrollTop > 20 ||
-    document.documentElement.scrollTop > 20
+    document.body.scrollTop > window.innerHeight ||
+    document.documentElement.scrollTop > window.innerHeight
   ) {
     gotopbutton.style.display = "block";
   } else {
     gotopbutton.style.display = "none";
   }
+
+  // console.log(window.innerHeight+"/"+document.documentElement.scrollTop);
 };
 
 gotopbutton.addEventListener("click", backToTop);

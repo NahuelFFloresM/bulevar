@@ -6,12 +6,13 @@
   src: url('../fonts/UniversBlack.ttf');
 }
 
-@font-face { font-family: universal-LTStd;
-  src: url('../fonts/UniversLTStd.otf');
+@font-face { font-family: universal-light-normal;
+  src: url('../fonts/Univers-light-normal.ttf') format('ttf'),
+       url('../fonts/Univers-light-normal.woff') format('woff');
 }
 
-@font-face { font-family: universal-light-normal;
-  src: url('../fonts/Univers-light-normal.ttf');
+@font-face { font-family: universal-LTStd;
+  src: url('../fonts/UniversLTStd.otf');
 }
 
 @font-face { font-family: universal-bold;
@@ -276,6 +277,10 @@ footer{
   z-index: 5;
   color: white;
   cursor: pointer;
+}
+
+#btn-to-top{
+  display: none;
 }
 
 .i-top{
