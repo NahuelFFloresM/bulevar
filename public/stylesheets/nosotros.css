@@ -25,8 +25,17 @@
   height: auto;
 }
 
-.svg-list svg{
-  margin: 2rem;
+.svg-list .tarjeta svg{
   height: auto;
   width: 5rem;
+}
+
+.tarjeta{
+  margin: 2rem;
+  text-align: center;
+}
+
+
+.tarjeta h4{
+  margin-top: 2rem;
 }
