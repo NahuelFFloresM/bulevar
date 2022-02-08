@@ -25,9 +25,16 @@
   height: auto;
 }
 
+@-moz-document url-prefix() {
+  .svg-list .tarjeta svg{
+    height: auto;
+    width: 20vh;
+  }
+}
+
 .svg-list .tarjeta svg{
   height: auto;
-  width: 5rem;
+  width: 10vh;
 }
 
 .tarjeta{

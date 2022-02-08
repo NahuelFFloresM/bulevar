@@ -208,6 +208,12 @@ footer{
   height: 100%;
 }
 
+.gmaps-container a > img{
+  width: 100vh;
+  max-height: 40vh;
+  object-fit: cover;
+}
+
 .contacto-container{
   width: 40%;
   min-height: 40%;
