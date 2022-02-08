@@ -61,7 +61,13 @@ router.get('/',async function(req,res,next){
 	});
 });
 
-router.get('/1',function(req,res,next){
-  res.render('obrainfo');
-})
+router.get('/:id',async function(req,res,next){
+  Obras.find({id:req.params.id},function(err,items){
+    if(err){
+      res.render('obrainfo',{error: err , data:null});
+		}
+    res.render('obrainfo',{error: null , data:items});
+  });
+});
+
 module.exports = router;

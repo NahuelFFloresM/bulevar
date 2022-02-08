@@ -44,8 +44,13 @@ router.get('/',async function(req,res,next){
 	});
 });
 
-router.get('/:id', function(req,res,next){
-  res.render('productoinfo',{data:'Hello data'});
-})
+router.get('/:id',function(req,res,next){
+  Obras.fnd({id:req.params.id},function(err,items){
+    if(err){
+      res.render('obrainfo',{error: err , data:null});
+		}
+    res.render('obrainfo',{error: null , data:items});
+  });
+});
 
 module.exports = router;

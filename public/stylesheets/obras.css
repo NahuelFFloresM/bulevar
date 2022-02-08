@@ -1,6 +1,6 @@
-.nav {
+/* .nav {
   padding-left: 10% !important;
-}
+} */
 
 /* .nav-link{
   padding: 0.5rem 8rem !important;
@@ -24,6 +24,7 @@ div[role="tabpanel"]{
   position: relative;
   margin-bottom: 3%;
   max-width: 30%;
+  cursor: pointer;
 }
 
 .obra-item:hover .info-tag{

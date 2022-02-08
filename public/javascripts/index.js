@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 window.onscroll = function(ev) {
-  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+  // console.log(window.innerHeight+window.scrollY +"/"+document.body.offsetHeight);
+  if ((window.innerHeight + window.scrollY + 20) >= document.body.offsetHeight) {
     let item = document.querySelector('[class^="i-whatsapp-container"]');
     item.style.bottom = "70px";
     item.style.zIndex = "1";

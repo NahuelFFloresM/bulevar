@@ -99,7 +99,7 @@
       <!-- Wrap the rest of the page in another container to center all the content. -->
 
       <div class="container-fluid marketing">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
             <button class="nav-link active" id="pvc-tab" data-bs-toggle="tab" data-bs-target="#pvc" type="button" role="tab" aria-controls="pvc" aria-selected="true">PVC</button>
           </li>
@@ -204,8 +204,10 @@
           </svg>
           elbulevaraberturas@yahoo.com.ar
         </p>
-        <div class="gmaps-container">
-          <iframe style="width:inherit; height:inherit; min-height: inherit;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Av.%20Monse%C3%B1or%20Actis%201547,%20B7001OAB%20Tandil,%20Provincia%20de%20Buenos%20Aires+(El%20Bulevar%20Aberturas)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/car-satnav-gps/">Car GPS</a></iframe> 
+        <div class="gmaps-container" id="map">     
+          <a href="https://www.google.com/maps/place/El+Bulevar+Aberturas/@-37.3105095,-59.1145657,17z/data=!3m1!4b1!4m5!3m4!1s0x95911ff97dce6d4b:0xe9639ddf23c489a6!8m2!3d-37.3105138!4d-59.112377">
+            <img src="../public/assets/gmapslocation.png" alt="Ubicacion oficinas" class="img-fluid">
+          </a>
         </div>
       </div>
       <!-- FOOTER -->
@@ -254,25 +256,8 @@
       </div>
     </main>
     <script src="../public/javascripts/index.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <!-- <script type="text/javascript">
-      (function () {
-          var options = {
-              whatsapp: "+(800) 123-45-67", // WhatsApp number
-              call_to_action: "Su consulta no molesta", // Call to action
-              position: "left", // Position may be 'right' or 'left'
-          };
-          var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-          var s = document.createElement('script');
-          s.type = 'text/javascript';
-          s.async = true;
-          s.src = url + '/widget-send-button/js/init.js';
-          s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-          console.log(s);
-          var x = document.getElementsByTagName('script')[0];
-          x.parentNode.insertBefore(s, x);
-      })();
-    </script> -->
+    <script language="javascript" src="js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> -->
   </body>
 </html>

@@ -107,14 +107,13 @@ footer{
 }
 
 .carousel-item {
-  height: 30rem;
+  height: 100vh;
 }
 .carousel-item > img {
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 100%;
-  height: 30rem;
+  height: 100%;
 }
 
 /* transition duration to control the speed of fade effect */
@@ -164,6 +163,10 @@ footer{
   margin-left: .75rem;
 }
 /* rtl:end:ignore */
+
+.container.marketing {
+  max-width: 80% !important;
+}
 
 
 /* Featurettes

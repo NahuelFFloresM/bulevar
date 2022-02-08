@@ -8,7 +8,8 @@
 }
 
 .i-data{
-  width: 60px;
+  /* width: 60px; */
+  width: 25%;
   height: auto;
   float: left;
   color:#00A2E8;
@@ -22,4 +23,10 @@
 .img-fluid{
   width: 100%;
   height: auto;
+}
+
+.svg-list svg{
+  margin: 2rem;
+  height: auto;
+  width: 5rem;
 }
