@@ -1,5 +1,6 @@
 var express = require('express');
 const mongoose = require('mongoose');
+// var Mustache = require('mustache');
 const { Schema } = mongoose;
 
 var router = express.Router();
@@ -13,21 +14,8 @@ var router = express.Router();
 
 const db = mongoose.connection;
 
-// var ObraModel = require('../schemas/obras');
-// var obraSchema = new mongoose.Schema({
-//   nombre: String,
-//   ubicacion: String,
-//   referencia: Boolean,
-//   portada: String,
-//   finalizacion: String,
-//   localizacion: String,
-//   productos: [String],
-//   tipo: String,
-//   Imagenes: [String],
-// });
-
-// const Obra = db.model('obra', obraSchema);
-
+var obraSchema = require('../schemas/obras');
+const Obras = obraSchema;
 
 //---- RUTAS
 router.get('/', function(req, res, next) {

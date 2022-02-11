@@ -8,12 +8,12 @@ document.addEventListener("DOMContentLoaded", function() {
   document.getElementById('i-location-opener').addEventListener('click',function(){
     let item = document.querySelector('.contacto-container');
     item.style.right = '0%';
-  })
+  });
 
   document.querySelector('.contacto-container').addEventListener('mouseleave',function(){
     let item = document.querySelector('.contacto-container');
     item.style.right = '-40%';
-  })
+  });
 });
 
 window.onscroll = function(ev) {
