@@ -45,16 +45,16 @@
         </div>
       </nav>
     </header>
-
+    {{data}}
     <main class="container marketing">
-   
+      {{#data}}
       <div class="row">
         <div class="col-lg-12">
           <div class="foto-obra-container position-relative">
-            <img src="../public/assets/Al (10 pinos).jpg" alt="portada obra" class="img-portada">
+            <img src="../public/assets/{{portada}}" alt="portada obra" class="img-portada">
             <div class="info-card">
-              <p>Obra Nombre</p>
-              <p>Obra Ubicacion</p>
+              <p>{{ nombre }}</p>
+              <p>{{ ubicacion }}</p>              
             </div>
           </div>
         </div>
@@ -74,56 +74,43 @@
         </div>
         <div class="col-lg-5">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item fw-light">Vivienda</li>
-            <li class="list-group-item fw-light">Façades, Sliding doors, Doors, Windows</li>
-            <li class="list-group-item fw-light">FWS 50.HI, ASS 70 FD, ASS 70.HI</li>
-            <li class="list-group-item fw-light">Localización</li>
-            <li class="list-group-item fw-light">MM/AAAA</li>
+            <li class="list-group-item fw-light">{{tipo}}</li>
+            <li class="list-group-item fw-light">{{#productos}}{{.}}, {{/productos}}</li>
+            <li class="list-group-item fw-light">{{series}}</li>
+            <li class="list-group-item fw-light">{{localizacion}}</li>
+            <li class="list-group-item fw-light">{{finalizacion}}</li>
             <li class="list-group-item fw-light">© ElBulevar</li>
           </ul>
         </div>
       </div>
-      <hr class="featurette-divider">
-
-      <!-- GALERIA IMAGENES -->
-      <!-- <div class="container">
-        <div class="intro">
-            <h2 class="text-center">Lightbox Gallery</h2>
-            <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
-        </div>
-        <div class="row photos">
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="../public/assets/Al (10 pinos).jpg" data-lightbox="photos"><img class="img-fluid" src="../public/assets/Al (10 pinos).jpg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="../public/assets/schueco-logo-svg-data.svg" data-lightbox="photos"><img class="img-fluid" src="../public/assets/schueco-logo-svg-data.svg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="assets/img/loft.jpg" data-lightbox="photos"><img class="img-fluid" src="assets/img/loft.jpg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="assets/img/building.jpg" data-lightbox="photos"><img class="img-fluid" src="assets/img/building.jpg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="assets/img/loft.jpg" data-lightbox="photos"><img class="img-fluid" src="assets/img/loft.jpg"></a></div>
-            <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="assets/img/desk.jpg" data-lightbox="photos"><img class="img-fluid" src="assets/img/desk.jpg"></a></div>
-        </div>
-      </div> -->
       
+      <hr class="featurette-divider">
+      
+      <!-- FOTOS GALERIA -->
       <div class="row mb-5">
         <div class="col-lg-8">
           <div class="row">
             <div class="col-lg-5 p-1">
-              <a href="../public/assets/Al (10 pinos).jpg" data-lightbox="photos"><img class="img-fluid img-galery" src="../public/assets/Al (10 pinos).jpg"></a>
+              <a href="../public/assets/{{imagenes.0}}" data-lightbox="photos"><img class="img-fluid img-galery" src="../public/assets/{{imagenes.0}}"></a>
             </div>
             <div class="col-lg-7 p-1">
-              <a href="../public/assets/Al (10 pinos).jpg" data-lightbox="photos"><img class="img-fluid img-galery" src="../public/assets/Al (10 pinos).jpg"></a>
+              <a href="../public/assets/{{imagenes.1}}" data-lightbox="photos"><img class="img-fluid img-galery" src="../public/assets/{{imagenes.1}}"></a>
             </div>
           </div>
           <div class="row">
             <div class="col-lg-7 p-1">
-              <a href="../public/assets/Al (10 pinos).jpg" data-lightbox="photos"><img class="img-fluid img-galery" src="../public/assets/Al (10 pinos).jpg"></a>
+              <a href="../public/assets/{{imagenes.2}}" data-lightbox="photos"><img class="img-fluid img-galery" src="../public/assets/{{imagenes.2}}"></a>
             </div>
             <div class="col-lg-5 p-1">
-              <a href="../public/assets/Al (10 pinos).jpg" data-lightbox="photos"><img class="img-fluid img-galery" src="../public/assets/Al (10 pinos).jpg"></a>
+              <a href="../public/assets/{{imagenes.3}}" data-lightbox="photos"><img class="img-fluid img-galery" src="../public/assets/{{imagenes.3}}"></a>
             </div>
           </div>
         </div>
         <div class="col-lg-4 p-1">
-          <a href="../public/assets/Al (10 pinos).jpg" data-lightbox="photos"><img class="img-fluid img-galery" src="../public/assets/Al (10 pinos).jpg"></a>
+          <a href="../public/assets/{{imagenes.4}}" data-lightbox="photos"><img class="img-fluid img-galery" src="../public/assets/{{imagenes.4}}"></a>
         </div>
       </div>
+      {{/data}}
 
       <div class="i-top-container">
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-up-square-fill i-top color-principal" viewBox="0 0 16 16" id="btn-to-top">
@@ -155,7 +142,6 @@
           elbulevaraberturas@yahoo.com.ar
         </p>
         <div class="gmaps-container" id="map">
-          <!-- <iframe style="width:inherit; height:inherit; min-height: inherit;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/embed/v1/?key=AIzaSyAO5Ys28J2AvZajEJScDLKcIL5T1Ffj7UU;width=100%25&amp;height=600&amp;hl=es&amp;q=Av.%20Monse%C3%B1or%20Actis%201547,%20B7001OAB%20Tandil,%20Provincia%20de%20Buenos%20Aires+(El%20Bulevar%20Aberturas)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;&output=embed"><a href="https://www.gps.ie/car-satnav-gps/">Car GPS</a></iframe> -->          
           <a href="https://www.google.com/maps/place/El+Bulevar+Aberturas/@-37.3105095,-59.1145657,17z/data=!3m1!4b1!4m5!3m4!1s0x95911ff97dce6d4b:0xe9639ddf23c489a6!8m2!3d-37.3105138!4d-59.112377">
             <img src="../public/assets/gmapslocation.png" alt="Ubicacion oficinas" class="img-fluid">
           </a>
@@ -210,7 +196,5 @@
   <script language="javascript" src="../js/bootstrap.min.js"></script>
   <script src="../node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
   <script src="../node_modules/lightbox2/src/js/lightbox.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> -->
 </body>
 </html>

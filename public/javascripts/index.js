@@ -1,6 +1,7 @@
 let gotopbutton = document.getElementById("btn-to-top");
 
 
+
 document.addEventListener("DOMContentLoaded", function() {
   
   // let gotopbutton = document.getElementById("btn-to-top");
@@ -14,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
     let item = document.querySelector('.contacto-container');
     item.style.right = '-40%';
   });
+
+  
 });
 
 window.onscroll = function(ev) {

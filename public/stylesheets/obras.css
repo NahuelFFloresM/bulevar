@@ -10,20 +10,29 @@ button[role="tab"]{
   padding: 0.5rem 11rem !important;
 }
 
-div[role="tabpanel"]{
+
+div[role="tabpanel"] {
   padding: 2rem;
-  display: flex !important;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
+div[role="tabpanel"] a {
+  /* max-width: 30%; */
+  width: 30%;
+}
+
+.tab-content>.active{
+  display: flex !important;
+}
+
 .obra-item{
   /* max-width: 300px;
   max-height: 200px; */
+  /* max-width: 30%; */
   position: relative;
   margin-bottom: 3%;
-  max-width: 30%;
   cursor: pointer;
 }
 

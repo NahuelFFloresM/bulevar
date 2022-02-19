@@ -10,7 +10,8 @@
     localizacion: {type:String},
     productos: [{type:String}],
     tipo: {type:String},
-    Imagenes: [{type:String}]
+    series: {type:String},
+    imagenes: [{type:String}]
   });
 
   module.exports = mongoose.model('Obra', obraSchema);

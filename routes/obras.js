@@ -8,25 +8,15 @@ var router = express.Router();
 // mongoatlas pass: lyBOhKoIOJwdrvYt
 
 var obraSchema = require('../schemas/obras');
-// var obraSchema = new mongoose.Schema({
-//   nombre: String,
-//   ubicacion: String,
-//   referencia: Boolean,
-//   portada: String,
-//   finalizacion: String,
-//   localizacion: String,
-//   productos: [String],
-//   tipo: String,
-//   Imagenes: [String],
-// });
 
 const Obras = obraSchema;
 
 
 //---- RUTAS
 
+// Obtener las obras para mostrado general de todas de ellas
 router.get('/',async function(req,res,next){
-  Obras.find({},function(err,items){
+  Obras.find({},'_id ubicacion nombre portada tipo',function(err,items){
     if(err){
       res.send(err);
 		}
