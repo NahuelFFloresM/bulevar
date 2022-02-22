@@ -47,8 +47,19 @@ router.get('/nuestros_productos', function(req,res,next){
   res.render('productos');
 });
 
-router.get('/nuestros_productos/:id', function(req,res,next){
-  Productos.findById({_id:req.params.id},function(err,items){
+router.get('/nuestros_productos/pvc/:id', function(req,res,next){
+  Productos.find({categoria:req.params.id},function(err,items){
+    if(err){
+      res.render('productoinfo',{error: err , data:null});
+      // res.send({error: err , data:null});
+		}
+    res.render('productoinfo',{error: null , data:items});
+    // res.send({error: null , data:items});
+  });
+})
+
+router.get('/nuestros_productos/alu/:id', function(req,res,next){
+  Productos.find({categoria:req.params.id},function(err,items){
     if(err){
       res.render('productoinfo',{error: err , data:null});
       // res.send({error: err , data:null});

@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
   fetch('/obras')
   .then(response => response.json())
   .then(res_object => {
-    // console.log(res_object);
+    console.log(res_object);
     let pvc_container = document.getElementById('pvc');
     let alu_container = document.getElementById('aluminio');
     res_object.forEach(element => {
