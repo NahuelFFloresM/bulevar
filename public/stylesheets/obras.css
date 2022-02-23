@@ -8,6 +8,8 @@
 
 button[role="tab"]{
   padding: 0.5rem 11rem !important;
+  font-family: 'universal-bold';
+  letter-spacing: 3px;
 }
 
 
@@ -19,8 +21,8 @@ div[role="tabpanel"] {
 }
 
 div[role="tabpanel"] a {
-  /* max-width: 30%; */
-  width: 30%;
+  width: 50%;
+  padding: 3%;
 }
 
 .tab-content>.active{
