@@ -1,7 +1,7 @@
 let gotopbutton = document.getElementById("btn-to-top");
 
-
-
+let carousel_titles = ['Administracion','Ventas','Oficina Tecnica','Aluminio','PVC','Vidrio','Colocación','Logistica'];
+let pos_titles = 0;
 document.addEventListener("DOMContentLoaded", function() {
   
   // let gotopbutton = document.getElementById("btn-to-top");
@@ -15,7 +15,11 @@ document.addEventListener("DOMContentLoaded", function() {
     let item = document.querySelector('.contacto-container');
     item.style.right = '-40%';
   });
-
+  // document.getElementById("carouselExampleDark").addEventListener("webkitTransitionStart", function(){console.log('donewebkit')});
+  document.getElementById("carouselExampleDark").addEventListener("transitionstart", function(event){
+    console.log(carousel_titles[pos_titles++]);
+    console.log(event);
+  });
   
 });
 
@@ -53,5 +57,3 @@ function backToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
-
