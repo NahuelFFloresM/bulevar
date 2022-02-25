@@ -1,13 +1,14 @@
 'use strict';
 
 var createError = require('http-errors');
+// var crypto = require("crypto");
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var engines = require('consolidate');
 const mongoose = require('mongoose');
-const { Schema } = mongoose;
+// const { Schema } = mongoose;
 
 
 var indexRouter = require('./routes/index.js');
@@ -15,7 +16,7 @@ var obrasRouter = require('./routes/obras.js');
 var productosRouter = require('./routes/productos.js');
 
 
-const { MongoClient } = require('mongodb');
+// const { MongoClient } = require('mongodb');
 require('dotenv').config()
 var compression = require('compression');
 var helmet = require('helmet');
@@ -28,7 +29,12 @@ mongoose.connect(process.env.DB_MONGO_URI, {useNewUrlParser: true, useUnifiedTop
 
 var app = express();
 
+// const nonce = crypto.randomBytes(16).toString('hex');
 app.use(helmet());
+
+// cf24ef80af08a52500a7a4eb189957883a8453b45e166d8faf808e0451c5510c
+
+
 app.use(express.static(__dirname + '/node_modules/bootstrap/dist'));
 app.use(express.static(__dirname + '/public'));
 

@@ -42,7 +42,28 @@
   text-align: center;
 }
 
-
 .tarjeta h4{
   margin-top: 2rem;
+}
+
+.modal.fade .modal-dialog{
+  transform: unset;
+  transition: ease-in-out 0.3s;
+}
+
+.modal{
+  transition: ease-in-out 0.3s;
+}
+
+.modal-header{
+  border-bottom: 0px;
+}
+.tarjeta-modal {
+  text-align: center;
+}
+
+.tarjeta-modal svg{
+  width: 13vh;
+  height: auto;
+  margin-bottom: 2rem;
 }

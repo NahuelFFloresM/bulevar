@@ -15,11 +15,29 @@ document.addEventListener("DOMContentLoaded", function() {
     let item = document.querySelector('.contacto-container');
     item.style.right = '-40%';
   });
-  // document.getElementById("carouselExampleDark").addEventListener("webkitTransitionStart", function(){console.log('donewebkit')});
-  document.getElementById("carouselExampleDark").addEventListener("transitionstart", function(event){
-    console.log(carousel_titles[pos_titles++]);
-    console.log(event);
+
+  document.getElementById('i-calidad').addEventListener('click',function(){
+    var myModal = new bootstrap.Modal(document.getElementById('modal_nosotros'));
+    myModal.toggle();
   });
+  document.getElementById('i-trabajo').addEventListener('click',function(){
+    var myModal = new bootstrap.Modal(document.getElementById('modal_nosotros'));
+    myModal.toggle();
+  });
+  document.getElementById('i-social').addEventListener('click',function(){
+    var myModal = new bootstrap.Modal(document.getElementById('modal_nosotros'));
+    myModal.toggle();
+  });
+  document.getElementById('i-cliente').addEventListener('click',function(){
+    var myModal = new bootstrap.Modal(document.getElementById('modal_nosotros'));
+    myModal.toggle();
+  });
+
+  // document.getElementById("carouselExampleDark").addEventListener("webkitTransitionStart", function(){console.log('donewebkit')});
+  // document.getElementById("carouselExampleDark").addEventListener("transitionstart", function(event){
+  //   console.log(carousel_titles[pos_titles++]);
+  //   console.log(event);
+  // });
   
 });
 
