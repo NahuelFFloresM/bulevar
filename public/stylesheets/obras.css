@@ -10,6 +10,11 @@ button[role="tab"]{
   padding: 0.5rem 11rem !important;
   font-family: 'universal-bold';
   letter-spacing: 3px;
+  width: 100%;
+}
+
+li[role="presentation"]{
+  width: 37%;
 }
 
 
