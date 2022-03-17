@@ -67,3 +67,23 @@
   height: auto;
   margin-bottom: 2rem;
 }
+
+.tarjeta h4{
+  width: 15rem;
+  word-wrap: break-word!important;
+  word-break: break-word!important;
+}
+
+@media (max-width:1700px) {
+  .tarjeta{
+    margin: 0;
+    width: 50%;
+  }
+
+  .tarjeta h4{
+    width: 15rem;
+    font-size: medium;
+    word-wrap: break-word!important;
+    word-break: break-word!important;
+  }
+}

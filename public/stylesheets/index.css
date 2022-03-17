@@ -19,6 +19,7 @@
   src: url('../fonts/UniversLTStd-Bold.otf');
 }
 
+
 header{
   position: absolute;
   z-index: 2;
@@ -29,10 +30,17 @@ header{
   right: 0;
   text-align: center;
   top:30px;
+  height: 30vh;
 }
+
+nav div a > img{
+  height: auto;
+  width: auto;
+}
+
 .nav-item a{
   color: white;
-  font-size: 20px;
+  /* font-size: 2rem; */
 }
 body {
   color: #6a6a6a;
@@ -42,6 +50,7 @@ body {
 *{
   scroll-behavior: smooth;
   font-family:'universal-light-normal', sans-serif, monospace;
+  font-size: 1.3rem;
 }
 
 .bg-principal{
@@ -54,10 +63,6 @@ body {
 
 .navbar-collapse{
   flex-grow: 0;
-}
-
-*{
-  font-size: 20px;
 }
 
 footer{
@@ -319,4 +324,11 @@ footer{
     margin-top: 7rem;
   }
 }
+
+@media (max-width:1500px){
+  .nav-item a{
+    font-size: 0.7rem;
+  }
+}
+
 
