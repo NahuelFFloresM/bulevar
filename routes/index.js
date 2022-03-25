@@ -48,18 +48,32 @@ router.get('/nuestros_productos', function(req,res,next){
 });
 
 router.get('/nuestros_productos/pvc/:id', function(req,res,next){
-  Productos.find({categoria:req.params.id},function(err,items){
-    if(err){
-      res.render('productoinfo',{error: err , data:null});
-      // res.send({error: err , data:null});
-		}
-    res.render('productoinfo',{error: null , data:items});
-    // res.send({error: null , data:items});
-  });
+  // Productos.find({tipo:'pvc',categoria:req.params.id},null,{sort:{categoria:-1}},function(err,items){
+  //   if(err){
+  //     res.render('productoinfo',{error: err , data:null});
+  //     // res.send({error: err , data:null});
+	// 	}
+  //   res.render('productoinfo',{error: null , data:items});
+  //   // res.send({error: null , data:items});
+  // });
+  
+  Productos.aggregate([
+    { $match: {tipo:'pvc',categoria:req.params.id} },
+    { $group: { _id: '$subcategoria', items:{$push:'$$ROOT'}}}
+  ]).then(result => {
+    console.log(result);
+    res.render('productoinfo',{error: null , data:result});
+  })
+  .catch(error => {
+    console.log(error);
+    res.render('productoinfo',{error: error , data:null});
+  })
+  
+  
 })
 
 router.get('/nuestros_productos/alu/:id', function(req,res,next){
-  Productos.find({categoria:req.params.id},function(err,items){
+  Productos.find({tipo:'alu',categoria:req.params.id},function(err,items){
     if(err){
       res.render('productoinfo',{error: err , data:null});
       // res.send({error: err , data:null});

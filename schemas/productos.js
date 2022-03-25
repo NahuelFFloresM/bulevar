@@ -6,6 +6,7 @@
     descripcion: {type:String},
     propiedades: [{type:String}],
     categoria: {type:String},
+    subcategoria: {type:String},
     patrocinador: {type:String},
     descripcion_corta: {type:String},
     portada:{type:String},

@@ -30,12 +30,15 @@ header{
   right: 0;
   text-align: center;
   top:30px;
-  height: 30vh;
 }
 
 nav div a > img{
   height: auto;
   width: auto;
+}
+
+header nav {
+  height: 20vh;
 }
 
 .nav-item a{
@@ -104,7 +107,7 @@ footer{
 
 .r-text-5{
   left: 5% !important;
-  right: unset;
+  /* right: unset; */
 }
 /* Declare heights because of positioning of img element */
 .carousel-item-obra {
