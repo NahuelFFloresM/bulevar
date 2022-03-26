@@ -59,13 +59,13 @@ router.get('/nuestros_productos/pvc/:id', function(req,res,next){
   
   Productos.aggregate([
     { $match: {tipo:'pvc',categoria:req.params.id} },
-    { $group: { _id: '$subcategoria', items:{$push:'$$ROOT'}}}
+    { $group: { _id: '$subcategoria', items:{$push:'$$ROOT'}}},
+    { $sort: { _id: 1 }}
   ]).then(result => {
     console.log(result);
     res.render('productoinfo',{error: null , data:result});
   })
   .catch(error => {
-    console.log(error);
     res.render('productoinfo',{error: error , data:null});
   })
   
@@ -73,14 +73,24 @@ router.get('/nuestros_productos/pvc/:id', function(req,res,next){
 })
 
 router.get('/nuestros_productos/alu/:id', function(req,res,next){
-  Productos.find({tipo:'alu',categoria:req.params.id},function(err,items){
-    if(err){
-      res.render('productoinfo',{error: err , data:null});
-      // res.send({error: err , data:null});
-		}
-    res.render('productoinfo',{error: null , data:items});
-    // res.send({error: null , data:items});
-  });
+  // Productos.find({tipo:'alu',categoria:req.params.id},function(err,items){
+  //   if(err){
+  //     res.render('productoinfo',{error: err , data:null});
+  //     // res.send({error: err , data:null});
+	// 	}
+  //   res.render('productoinfo',{error: null , data:items});
+  //   // res.send({error: null , data:items});
+  // });
+  Productos.aggregate([
+    { $match: {tipo:'alu',categoria:req.params.id} },
+    { $group: { _id: '$subcategoria', items:{$push:'$$ROOT'}}},
+    { $sort: { _id: 1 }}
+  ]).then(result => {
+    res.render('productoinfo',{error: null , data:result});
+  })
+  .catch(error => {
+    res.render('productoinfo',{error: error , data:null});
+  })
 })
 
 module.exports = router;

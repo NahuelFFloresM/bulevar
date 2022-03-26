@@ -48,7 +48,8 @@
 
 div[role="tabpanel"] a{
   width: auto;
-  padding: 0 0 2rem 0;
+  padding: 0 0 0 0;
+  margin-bottom: 2rem;
 }
 
 

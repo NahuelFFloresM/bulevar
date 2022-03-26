@@ -16,7 +16,7 @@ const Obras = obraSchema;
 
 // Obtener las obras para mostrado general de todas de ellas
 router.get('/',async function(req,res,next){
-  Obras.find({},'_id ubicacion nombre portada tipo',function(err,items){
+  Obras.find({},'_id ubicacion nombre portada tipo localizacion',{sort: { nombre: 'asc' }},function(err,items){
     if(err){
       res.send(err);
 		}

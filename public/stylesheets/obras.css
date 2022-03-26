@@ -26,8 +26,8 @@ div[role="tabpanel"] {
 }
 
 div[role="tabpanel"] a {
-  width: 50%;
-  padding: 3%;
+  width: 47%;
+  padding: 0;
 }
 
 .tab-content>.active{

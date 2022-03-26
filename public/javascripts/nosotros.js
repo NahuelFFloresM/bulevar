@@ -1,4 +1,4 @@
-titulos_carousel = ['Administracion','Ventas','Oficinas Tecnicas'];
+titulos_carousel = ['Ventas','Administración','Oficina Tecnicas','Sector Aluminio','Sector PVC','Sector Vidrio','Logistica','Colocación'];
 let car_indicator = 0;
 
 document.addEventListener("DOMContentLoaded", function() {
