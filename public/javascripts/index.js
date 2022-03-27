@@ -1,6 +1,6 @@
 let gotopbutton = document.getElementById("btn-to-top");
 
-let carousel_titles = ['Administracion','Ventas','Oficina Tecnica','Aluminio','PVC','Vidrio','Colocación','Logistica'];
+// let carousel_titles = ['Administracion','Ventas','Oficina Tecnica','Aluminio','PVC','Vidrio','Colocación','Logistica'];
 let pos_titles = 0;
 document.addEventListener("DOMContentLoaded", function() {
   
@@ -26,10 +26,10 @@ window.onscroll = function(ev) {
   // console.log(window.innerHeight+window.scrollY +"/"+document.body.offsetHeight);
   if ((window.innerHeight + window.scrollY + 20) >= document.body.offsetHeight) {
     let item = document.querySelector('[class^="i-whatsapp-container"]');
-    item.style.bottom = "70px";
+    item.style.bottom = "10%";
     item.style.zIndex = "1";
     let item2 = document.querySelector('[class^="i-top-container"]');
-    item2.style.bottom = "80px";    
+    item2.style.bottom = "10%";    
   } else {
     let item = document.querySelector('[class^="i-whatsapp-container"]');
     item.style.bottom = "15px";
