@@ -28,6 +28,8 @@ div[role="tabpanel"] {
 div[role="tabpanel"] a {
   width: 47%;
   padding: 0;
+  margin-bottom: 3%;
+  background-color: rgba(238, 238, 238, 0.8);
 }
 
 .tab-content>.active{
@@ -35,11 +37,9 @@ div[role="tabpanel"] a {
 }
 
 .obra-item{
-  /* max-width: 300px;
-  max-height: 200px; */
-  /* max-width: 30%; */
+  width: 100%;
+  height: 100%;
   position: relative;
-  margin-bottom: 3%;
   cursor: pointer;
 }
 
