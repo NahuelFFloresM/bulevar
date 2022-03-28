@@ -41,6 +41,7 @@ div[role="tabpanel"] a {
   height: 100%;
   position: relative;
   cursor: pointer;
+  display: flex;
 }
 
 .obra-item:hover .info-tag{
