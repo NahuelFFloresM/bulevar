@@ -1,4 +1,4 @@
-titulos_carousel = ['Ventas','Administración','Oficina Tecnicas','Sector Aluminio','Sector PVC','Sector Vidrio','Logistica','Colocación'];
+titulos_carousel = ['Ventas','Administración','Oficina Tecnica','Sector Aluminio','Sector PVC','Sector Vidrio','Logistica','Colocación'];
 let car_indicator = 0;
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -36,18 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var myCarousel = document.getElementById('carouselExampleDark')
   myCarousel.addEventListener('slide.bs.carousel', function (event) {
     let title = document.getElementById('colaboradores_title');
-    console.log(titulos_carousel.length);
-    if(event.direction == "left"){
-      if ((car_indicator + 1 ) == titulos_carousel.length){
-        car_indicator = -1;
-      }
-      title.innerHTML = titulos_carousel[++car_indicator];
-    }else {
-      if (car_indicator  == 0){
-        car_indicator = titulos_carousel.length;
-      }
-      title.innerHTML = titulos_carousel[--car_indicator];
-    };
+    title.innerHTML = titulos_carousel[event.to];
   })
 });
 
