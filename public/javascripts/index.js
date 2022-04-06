@@ -17,11 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-function updateModal(title,info){
-  document.getElementById('modal_valores_title').innerHTML=title;
-  document.getElementById('modal_valores_info').innerHTML="<p>"+info+"</p>";
-}
-
 window.onscroll = function(ev) {
   // console.log(window.innerHeight+window.scrollY +"/"+document.body.offsetHeight);
   if ((window.innerHeight + window.scrollY + 20) >= document.body.offsetHeight) {
