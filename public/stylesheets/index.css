@@ -233,6 +233,9 @@ footer{
   transition: all 0.5s ease-out;
   position: fixed;
 }
+.contacto-container p {
+  font-size: 1rem;
+}
 
 .contacto-container p svg{
   width: 30px;
