@@ -2,7 +2,7 @@ const path_url = window.location.href.split('/');
 let subcat = path_url.pop();
 let cat = path_url.pop();
 if (subcat === 'frente' ) subcat = 'frente integral';
-document.getElementById('categoria_title').innerHTML = cat.toUpperCase()+"/"+subcat.toUpperCase(); 
+document.getElementById('categoria_title').innerHTML = cat.toUpperCase()+" / "+subcat.toUpperCase(); 
 
 document.addEventListener("DOMContentLoaded", function() {
   
