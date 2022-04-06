@@ -43,6 +43,11 @@ header{
   object-fit: cover;
 }
 
+.galery-box{
+  max-height: 40vh;
+  overflow: hidden;
+}
+
 .img-portada{
   width: 100%;
   height: 100vh;
