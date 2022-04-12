@@ -2,6 +2,10 @@
   margin-bottom: 0rem !important;
 }
 
+.carousel-item > img{
+  object-fit: cover;
+}
+
 .featurette-divider{
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
