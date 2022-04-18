@@ -24,7 +24,7 @@ window.onscroll = function(ev) {
     item.style.bottom = "10%";
     item.style.zIndex = "1";
     let item2 = document.querySelector('[class^="i-top-container"]');
-    item2.style.bottom = "10%";    
+    item2.style.bottom = "11%";    
   } else {
     let item = document.querySelector('[class^="i-whatsapp-container"]');
     item.style.bottom = "15px";
