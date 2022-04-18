@@ -43,6 +43,7 @@
 .svg-list .tarjeta svg{
   height: auto;
   width: 10vh;
+  color: #00A2E8;
 }
 
 .tarjeta{
@@ -63,6 +64,10 @@
 #modal_valores_info{
   margin: auto;
   vertical-align: middle;
+}
+
+#modal_valores_icon{
+  color: #00A2E8;
 }
 
 .modal{
@@ -94,6 +99,14 @@
 
 .carousel-item-obra{
   height: 100% ;
+}
+
+.carousel-caption {
+  bottom: 1rem;
+  text-align: initial;
+}
+.carousel-caption p{
+  text-shadow: 2px 2px #444141;
 }
 
 

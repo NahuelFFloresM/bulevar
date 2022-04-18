@@ -1,4 +1,4 @@
-titulos_carousel = ['Ventas','Administración','Oficina Tecnica','Sector Aluminio','Sector PVC','Sector Vidrio','Logistica','Colocación'];
+titulos_carousel = ['Sector Comercial','Administración','Oficina Tecnica','Sector Aluminio','Sector PVC','Sector Vidrio','Logistica','Colocación'];
 let car_indicator = 0;
 
 function updateModal(title,info,icon){
