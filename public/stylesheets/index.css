@@ -101,14 +101,27 @@ footer{
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  bottom: 3rem;
+  bottom: 1rem;
   z-index: 10;
+  text-align: initial;
 }
 
 .carousel-caption p {
   margin-bottom: 1.25rem;
   font-size: 1.25rem;
   line-height: 1.4;
+  text-shadow: 2px 2px #444141;
+}
+
+.carousel-shadow {
+  background: -moz-linear-gradient(0deg, rgba(0,0,0,0.4) 15%, rgba(255,255,255,0) 30%);
+  background: -webkit-linear-gradient(90deg, rgba(0,0,0,0.4) 15%, rgba(255,255,255,0) 30%);
+  background: linear-gradient(0deg, rgba(0,0,0,0.4) 15%, rgba(255,255,255,0) 30%);
+  z-index: 2;
+}
+
+.carousel-control-prev, .carousel-control-next{
+  z-index: 3;
 }
 
 .r-text-5{

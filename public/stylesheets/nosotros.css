@@ -101,15 +101,6 @@
   height: 100% ;
 }
 
-.carousel-caption {
-  bottom: 1rem;
-  text-align: initial;
-}
-.carousel-caption p{
-  text-shadow: 2px 2px #444141;
-}
-
-
 @media (max-width:1700px) {
   .tarjeta{
     margin: 0 0 15px 0 ;
