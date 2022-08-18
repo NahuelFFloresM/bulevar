@@ -23,13 +23,14 @@
 header{
   position: absolute;
   z-index: 2;
-  width: 80%;
+  /* width: 80%; */
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
   text-align: center;
-  top:30px;
+  padding: 4%;
+  background: rgba(0,0,0,0.3);
 }
 
 nav div a > img{
@@ -39,6 +40,12 @@ nav div a > img{
 
 header nav {
   height: 20vh;
+}
+
+
+.logo-container{
+  display: flex;
+  max-width: 35%;
 }
 
 .nav-item a{
@@ -246,7 +253,7 @@ footer{
   min-height: 40%;
   padding: 25px;
   color:white;
-  z-index: 2;
+  z-index: 5;
   right: -40%;
   top: 0;
   transition: all 0.5s ease-out;
