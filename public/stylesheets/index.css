@@ -29,7 +29,7 @@ header{
   left: 0;
   right: 0;
   text-align: center;
-  padding: 4%;
+  padding: 1%;
   background: rgba(0,0,0,0.3);
 }
 
@@ -148,6 +148,7 @@ footer{
   top: 0;
   left: 0;
   height: 100%;
+  object-fit: cover;
 }
 
 /* transition duration to control the speed of fade effect */
