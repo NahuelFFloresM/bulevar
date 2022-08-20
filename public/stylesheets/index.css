@@ -46,6 +46,7 @@ header nav {
 .logo-container{
   display: flex;
   max-width: 35%;
+  align-items: center;
 }
 
 .nav-item a{
