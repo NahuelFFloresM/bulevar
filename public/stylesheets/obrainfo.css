@@ -1,7 +1,7 @@
 header{
   position: unset;
   width: 100%;
-  padding: 0.5rem 10% 0.5rem 10%;
+  padding: 2rem 10% 2rem 10%;
   background-color: rgba(106, 104, 104, 0.15);
   margin-bottom: 2rem;
 }
@@ -12,7 +12,7 @@ header{
 
 .info-card{
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.4);;
+  background-color: rgba(0, 0, 0, 0.4);
   top: 10%;
   left: 0;
   width: 30%;
