@@ -2,7 +2,7 @@
   "name": "aspp",
   "version": "0.0.0",
   "engines": {
-    "node": "12.0.0"
+    "node": "18.7.0"
   },
   "private": true,
   "scripts": {
@@ -18,10 +18,12 @@
     "crypto-js": "^4.1.1",
     "debug": "~2.6.9",
     "dotenv": "^11.0.0",
+    "ejs": "^3.1.8",
     "express": "^4.16.4",
     "helmet": "^5.0.1",
     "http-errors": "~1.6.3",
     "lightbox2": "^2.11.3",
+    "lingua": "^0.4.0",
     "loader.js": "^4.7.0",
     "mongodb": "^4.0.1",
     "mongoose": "^6.1.1",

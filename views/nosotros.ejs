@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.88.1">
-    <title>El Bulevar</title>    
+    <title><%= lingua.title %></title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -17,40 +16,7 @@
     <meta name="theme-color" content="#7952b3">
   </head>
   <body>      
-    <header>
-      <nav class="navbar navbar-expand-md">
-        <div class="container-fluid navbar-container">
-          <div class="logo-container">
-            <a href="/">
-              <img src="/public/assets/LOGO_25.png" class="img-fluid">
-            </a>
-            <a href="/" class="w-75">
-              <img src="/public/assets/Bulevar_solo_logo.png" class="img-fluid">
-            </a>
-            <a href="/">
-              <img src="/public/assets/Logo_Bulevar_BLANCO.png" class="img-fluid">
-            </a>
-          </div>      
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mb-md-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/nosotros">Nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/nuestras_obras">Obras</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/nuestros_productos">Productos</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
+    <%- include('header_white'); -%>
     <main>
    
       <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -92,11 +58,10 @@
 
         <div class="row d-flex justify-content-between data-block mt-5 mb-5">
           <div class="col-lg-5 d-flex justify-content-center align-items-center text-center">
-            <h2 class="text-break" style="width: 8rem;">Quiénes Somos</h2>
+            <h2 class="text-break" style="width: 8rem;"><%= lingua.somos_title %></h2>
           </div>
           <div class="col-lg-7 d-flex justify-content-center align-items-center">
-            <p>Somos una empresa familiar devenida a profesional, dedicada  a la fabricación de aberturas de Aluminio y PVC, fundada el 07 de julio de 1997 en la ciudad de Tandil (Buenos Aires, Argentina).
-              Lo acompañamos para solucionar de manera integral su necesidad de aberturas, desde el boceto hasta la colocación.</p>
+            <p><%= lingua.somos %></p>
           </div>
         </div>
 
@@ -105,10 +70,10 @@
         
         <div class="row d-flex justify-content-between data-block mt-5 mb-5">
           <div class="col-lg-5 d-flex justify-content-center align-items-center">
-            <h2>Misión</h2>
+            <h2><%= lingua.mision_title %></h2>
           </div>
           <div class="col-lg-7 d-flex justify-content-center align-items-center">
-            <p>Nuestra misión es brindar a nuestros clientes un producto diferencial en cuanto a sistemas de carpintería con el más elevado estándar de calidad; siendo la solución acorde a sus exigencias de estética, seguridad, y confort.</p>
+            <p><%= lingua.mision %></p>
           </div>
         </div>
 
@@ -116,10 +81,10 @@
 
         <div class="row d-flex justify-content-between data-block mt-5 mb-5">
           <div class="col-lg-5 d-flex justify-content-center align-items-center">
-            <h2>Visión</h2>
+            <h2><%= lingua.vision_title %></h2>
           </div>
           <div class="col-lg-7 d-flex justify-content-center align-items-center">
-            <p>Tenemos la determinación de seguir avanzando en la fabricación de sistemas de carpintería de altas prestaciones, bajo la filosofía de la mejora continua y el desarrollo tecnológico; para afianzaros en el mercado regional abocados tanto a proyectos residenciales y otros de mayor envergadura.</p>
+            <p><%= lingua.vision %></p>
           </div>
         </div>
 
@@ -127,47 +92,39 @@
 
         <div class="row d-flex justify-content-between data-block mt-5 mb-5">
           <div class="col-lg-5 d-flex justify-content-center align-items-center">
-            <h2>Valores</h2>
+            <h2><%= lingua.valores_title %></h2>
           </div>
           <div class="col-lg-7 d-flex justify-content-center align-items-center flex-wrap svg-list">
             <div class="tarjeta" id="i-calidad">
-              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
-                <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098l2.904 2.905z"/>
-              </svg> -->
               <img class="icon-tarjeta" src="assets/zu_pdca.png" alt="Calidad Icon">
-              <h4 class="text-align-center">Compromiso con la Calidad y la Mejora Continua</h4>
+              <h4 class="text-align-center"><%= lingua.valores.compromiso_title %></h4>
             </div>
             <div class="tarjeta" id="i-trabajo">
-              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
-                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
-                <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
-              </svg> -->
               <img class="icon-tarjeta" src="assets/groups_black_24dp.svg" alt="Trabajo Icon">
-              <h4 class="text-align-center">Integridad y trabajo en equipo</h4>
+              <h4 class="text-align-center"><%= lingua.valores.integridad_title %></h4>
             </div>
             <div class="tarjeta" id="i-profesional">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-award-fill" viewBox="0 0 16 16">
                 <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/>
                 <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
               </svg>
-              <h4 class="text-align-center">Profesionalismo</h4>
+              <h4 class="text-align-center"><%= lingua.valores.profesional_title %></h4>
             </div>
             <div class="tarjeta" id="i-cliente">
               <img class="icon-tarjeta" src="assets/handshake-solid-min.svg" alt="Social Icon"/>
-              <h4 class="text-align-center">Orientación hacia el cliente</h4>
+              <h4 class="text-align-center"><%= lingua.valores.orientacion_title %></h4>
             </div>
             <div class="tarjeta" id="i-responsabilidad">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
                 <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
               </svg>
-              <h4 class="text-align-center">Responsabilidad Social Empresaria</h4>
+              <h4 class="text-align-center"><%= lingua.valores.social_title %></h4>
             </div>
             <div class="tarjeta" id="i-planificacion">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
                 <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
               </svg>
-              <h4 class="text-align-center">Planificación cuidadosa y acciones efectivas</h4>
+              <h4 class="text-align-center"><%= lingua.valores.plan_title %></h4>
             </div>
           </div>
         </div>
@@ -176,38 +133,38 @@
 
         <div class="row d-flex justify-content-between data-block mt-5 mb-5">
           <div class="col-lg-5 d-flex justify-content-center align-items-center">
-            <h2>Indicadores</h2>
+            <h2><%= lingua.indicador_title %></h2>
           </div>
           <div class="col-lg-7 d-flex justify-content-between align-items-center flex-wrap">
             <div class="data-container mt-4 mb-4">
               <h3 class="data-number text-green display-5">+500</h3>
-              <h5 class="text-center">OBRAS</h5>
+              <h5 class="text-center"><%= lingua.indicador_obra_title %></h5>
             </div><div class="data-container mt-4 mb-4">
               <h3 class="data-number text-green display-5">+80000 kg</h3>
-              <h5 class="text-center">ALUMINIO PROCESADOS</h5>
+              <h5 class="text-center"><%= lingua.indicador_alu_title %></h5>
             </div>
             <div class="data-container mt-4 mb-4">
               <h3 class="data-number text-green display-5">+335000 kg</h3>
-              <h5 class="text-center">PVC PROCESADOS</h5>
+              <h5 class="text-center"><%= lingua.indicador_pvc_title %></h5>
             </div>
             <div class="data-container mt-4 mb-4">
               <h3 class="data-number text-green display-5">+3800m<sup>2</sup></h3>
-              <h5 class="text-center">PREDIO </h5>
+              <h5 class="text-center"><%= lingua.indicador_predio_title %></h5>
             </div>
             <div class="data-container mt-4 mb-4">
               <h3 class="data-number text-green display-5">+1500m<sup>2</sup></h3>
-              <h5 class="text-center">TALLER</h5>
+              <h5 class="text-center"><%= lingua.indicador_taller_title %></h5>
             </div>
             <div class="data-container mt-4 mb-4">
               <h3 class="data-number text-green display-5">+25 años</h3>
-              <h5 class="text-center">TRAYECTORIA</h5>
+              <h5 class="text-center"><%= lingua.indicador_trayectoria_title %></h5>
             </div>
           </div>
         </div>
 
         <hr class="featurette-divider">
 
-        <h2 class="mt-5 text-primary" id="colaboradores_title">Sector Comercial</h2>
+        <h2 class="mt-5 text-primary" id="colaboradores_title"><%= lingua.nosotros_sector_comercial %></h2>
         <div class="row d-flex justify-content-between data-block mt-2 mb-4">
           <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -225,9 +182,8 @@
               <div class="carousel-item carousel-item-obra active" data-bs-interval="4000">
                 <img src="../public/assets/VENTAS.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block r-text-5">
-                  <!-- <p> <b class="text-info">ADMINISTRACION: </b> -->
                   <p>
-                    Nuestra cara visible, compuesto por personal capacitado para brindar el mejor de los asesoramientos
+                    <%= lingua.nosotros_sector_ventas %>
                   </p>
                 </div>
               </div>
@@ -235,7 +191,7 @@
                 <img src="../public/assets/ADMINISTRACION.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block r-text-5">
                   <p>
-                    Son los encargados de brindar el soporte necesario a todo el personal de la fábrica, y quienes mantienen la relación con nuestros proveedores
+                    <%= lingua.nosotros_sector_administracion %>
                   </p>
                 </div>
               </div>
@@ -243,7 +199,7 @@
                 <img src="../public/assets/OT.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block r-text-5">
                   <p>
-                    Nuestro personal encargado de materializar los requerimientos brindados por usted. 
+                    <%= lingua.nosotros_sector_ot %>
                   </p>
                 </div>
               </div>
@@ -251,7 +207,7 @@
                 <img src="../public/assets/DIV_ALU.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block r-text-5">
                   <p>
-                    Nuestro equipo encargado de realizar sus aberturas metálicas con calidad alemana.
+                    <%= lingua.nosotros_sector_alu %>
                   </p>
                 </div>
               </div>
@@ -259,7 +215,7 @@
                 <img src="../public/assets/DIV_PVC.jpeg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block r-text-5">
                   <p>
-                    Nuestro equipo quien realiza sus aberturas de PVC de la misma manera que en realiza Alemania.
+                    <%= lingua.nosotros_sector_pvc %>
                   </p>
                 </div>
               </div>
@@ -267,7 +223,7 @@
                 <img src="../public/assets/Vidrio.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block r-text-5">
                   <p>
-                    Nuestros colaboradores encargados de dar el ultimo toque a las aberturas.
+                    <%= lingua.nosotros_sector_vidrio %>
                   </p>
                 </div>
               </div>
@@ -275,7 +231,7 @@
                 <img src="../public/assets/LOGISTICA.jpeg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block r-text-5">
                   <p>
-                    Nuestro personal a cargo de garantizar el optimo transporte de las aberturas a su vivienda.
+                    <%= lingua.nosotros_sector_logistica %>
                   </p>
                 </div>
               </div>
@@ -283,7 +239,7 @@
                 <img src="../public/assets/COLOCACION.jpeg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block r-text-5">
                   <p>
-                    Nuestro eslabón final con el cliente, quienes dan los toques finales en obra. 
+                    <%= lingua.nosotros_sector_colocacion %>
                   </p>
                 </div>
               </div>
@@ -307,74 +263,9 @@
       </div><!-- /.container -->
 
       <!-- INFORMACION CONTACTO -->
-      <div class="contacto-container bg-principal">
-        <div class="i-location position-absolute bg-principal" id="i-location-opener">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pin-map" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8l3-4z"/>
-            <path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z"/>
-          </svg>
-        </div>
-        <h3>¿Dónde Encontrarnos?</h3>
-        <p>Av. Monseñor Actis 1547</p>
-        <p>B70010AB Tandil, Provincia de Buenos Aires</p>
-        <p>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
-            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-          </svg>
-          0249 442-6749
-        </p>
-        <p>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mailbox" viewBox="0 0 16 16">
-            <path d="M4 4a3 3 0 0 0-3 3v6h6V7a3 3 0 0 0-3-3zm0-1h8a4 4 0 0 1 4 4v6a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V7a4 4 0 0 1 4-4zm2.646 1A3.99 3.99 0 0 1 8 7v6h7V7a3 3 0 0 0-3-3H6.646z"/>
-            <path d="M11.793 8.5H9v-1h5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.354-.146l-.853-.854zM5 7c0 .552-.448 0-1 0s-1 .552-1 0a1 1 0 0 1 2 0z"/>
-          </svg>
-          elbulevaraberturas@yahoo.com.ar
-        </p>
-        <div class="gmaps-container" id="map">     
-          <a href="https://www.google.com/maps/place/El+Bulevar+Aberturas/@-37.3105095,-59.1145657,17z/data=!3m1!4b1!4m5!3m4!1s0x95911ff97dce6d4b:0xe9639ddf23c489a6!8m2!3d-37.3105138!4d-59.112377">
-            <img src="../public/assets/gmapslocation.png" alt="Ubicacion oficinas" class="img-fluid">
-          </a>
-        </div>
-      </div>
+      <%- include('box-contactos'); %>
       <!-- FOOTER -->
-      <footer class="bg-primary">
-        <nav class="navbar navbar-expand-sm">
-          <div class="container-fluid">
-            <a>&copy; 2022 ElBulevarAberturas, Inc. &middot;</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapseFooter">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/nosotros">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/nuestras_obras">Obras</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/nuestros_productos">Productos</a>
-                </li>
-              </ul>
-            </div>
-            <div class="i-social-container">
-              <a href="https://www.instagram.com/aberturaselbulevar/">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-instagram i-social" viewBox="0 0 16 16">
-                  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                </svg>
-              </a>
-              <a href="https://www.facebook.com/elbulevaraberturas">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-facebook i-social" viewBox="0 0 16 16">
-                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </nav>
-      </footer>
+      <%- include('footer'); -%>
       <div class="i-whatsapp-container">
         <div class="i-whatsapp">
           <a href="https://wa.me/5492494499028"><img src="../public/assets/whatsapp-logo.svg" alt="Whatsapp Logo"></a>

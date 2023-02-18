@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="assets/favicon_icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title><%= lingua.title %></title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="/public/stylesheets/index.css" rel="stylesheet">
+    <link href="/public/stylesheets/productoinfo.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <meta name="theme-color" content="#7952b3">
+  </head>
+  <body>      
+    <%- include('header_black'); -%>
+    <main class="container marketing">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="foto-obra-container position-relative">
+            <img src="/public/assets/Al (10 pinos).jpg" alt="portada obra" class="img-portada">
+            <div class="info-text">
+              <% if (data == ''){ %>
+                <h4 class="mb-4 mt-5">
+                  En construcción.
+                </h4>
+              <% } %>
+              <% if (data != '') { %>
+                <p><%= data[0].items[0].descripcion %></p>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Categorías-->
+      <h2 class="fw-bold mt-5" id="categoria_title"></h2>
+        <% if (data == ''){ %>
+          <h4 class="mb-4 mt-5">
+            Actualmente no contamos con este producto todavia, estamos trabajando en ello.
+          </h4>
+        <% }; %>
+        <% if (data != ''){ %>
+          <% data.forEach(function(cate){ %>
+            <h4 class="mb-4 mt-5">
+              <%= cate._id %>
+            </h4>
+            <% cate.items.forEach(function(item){ %>
+              
+            <div class="row mt-3">
+              <div class="col-lg-12">
+                <div class="product-container d-flex">
+                  <div class="col-lg-4">
+                    <img src="/public/assets/<%= item.portada %>" class="img-fluid h-100" alt="">
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="product-data-container p-4">
+                      <h4><%= item.descripcion_corta %></h4>
+                      <p><%= item.descripcion %></p>
+                      <ul class="product-list">
+                        <li><%= item.propiedades[0] %></li>
+                        <li><%= item.propiedades[1] %></li>
+                        <li><%= item.propiedades[2] %></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <% }); %>
+          <% }); %>
+        <% } %>
+
+      <div class="i-top-container">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-up-square-fill i-top color-principal" viewBox="0 0 16 16" id="btn-to-top">
+          <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z"/>
+        </svg>
+      </div> 
+      <!-- Box Contactos -->
+      <%- include('box-contactos'); -%>
+
+    </main>
+    <!-- FOOTER -->
+    <%- include('footer'); -%>
+    <div class="i-whatsapp-container">
+      <div class="i-whatsapp">
+        <a href="https://wa.me/5492494499028"><img src="/public/assets/whatsapp-logo.svg" alt="Whatsapp Logo"></a>
+      </div>
+    </div>
+  <script src="/public/javascripts/index.js"></script>
+  <script src="/public/javascripts/producto.js"></script>
+  <script language="javascript" src="/js/bootstrap.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> -->
+</body>
+</html>

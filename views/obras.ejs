@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="assets/favicon_icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>El Bulevar</title>    
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../public/stylesheets/index.css" rel="stylesheet">
+    <link href="../public/stylesheets/obras.css" rel="stylesheet">
+
+        <!-- Favicons -->
+    <meta name="theme-color" content="#7952b3">
+  </head>
+  <body>      
+    <%- include('header_white'); -%>
+    <main>
+   
+      <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="4000">
+            <img src="/public/images/Al_10_pinos.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="/public/images/PVC_Valle_2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="/public/images/PVC_Valle.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="/public/images/delta-133A.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+      <div class="container-fluid marketing">
+        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pvc-tab" data-bs-toggle="tab" data-bs-target="#pvc" type="button" role="tab" aria-controls="pvc" aria-selected="true">PVC</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="aluminio-tab" data-bs-toggle="tab" data-bs-target="#aluminio" type="button" role="tab" aria-controls="aluminio" aria-selected="false">Aluminio</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="pvc" role="tabpanel" aria-labelledby="pvc-tab">
+            <!-- Seccion para contenido de obras pvc -->
+          </div>
+          <div class="tab-pane fade" id="aluminio" role="tabpanel" aria-labelledby="aluminio-tab">
+            <!-- Seccion para contenido de obras aluminio -->
+          </div>
+        </div>
+        <hr class="featurette-divider">
+
+        <div class="i-top-container">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-up-square-fill i-top color-principal" viewBox="0 0 16 16" id="btn-to-top">
+            <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z"/>
+          </svg>
+        </div>        
+      </div><!-- /.container -->
+      <!-- Box Contactos -->
+      <%- include('box-contactos'); -%>
+
+      <!-- FOOTER -->
+      <%- include('footer'); -%>
+
+      <div class="i-whatsapp-container">
+        <div class="i-whatsapp">
+          <a href="https://wa.me/5492494499028"><img src="../public/assets/whatsapp-logo.svg" alt="Whatsapp Logo"></a>
+        </div>
+      </div>
+    </main>
+    <script src="../public/javascripts/index.js" crossorigin="anonymous"></script>
+    <script src="../public/javascripts/obras.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> -->
+    <script language="javascript" src="js/bootstrap.min.js"></script>
+  </body>
+</html>

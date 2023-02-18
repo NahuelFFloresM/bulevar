@@ -1,0 +1,44 @@
+<header>
+  <nav class="navbar navbar-expand-md">
+    <div class="container-fluid navbar-container">
+      <div class="logo-container">
+        <a href="/">
+          <img src="/public/assets/LOGO_25.png" class="img-fluid">
+        </a>
+        <a href="/" class="w-75">
+          <img src="/public/assets/Bulevar_solo_logo.png" class="img-fluid">
+        </a>
+        <a href="/">
+          <img src="/public/assets/Logo_Bulevar_NEGRO.png" class="img-fluid">
+        </a>
+      </div>
+      
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link"  href="?language=es">
+              <img src="/public/assets/i_argentina.png" alt="Argentina Languaje" class="i-languaje <%= (lingua.navigation.ingles == "Ingles") ? " ":"i-languaje-deselected" %>">                 
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="?language=en">
+              <img src="/public/assets/i_united-kingdom.png" alt="Argentina Languaje" class="i-languaje <%= (lingua.navigation.ingles == "English") ? " ":"i-languaje-deselected" %>">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/"><%= lingua.nav.home %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/nosotros"><%= lingua.nav.nosotros %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/nuestras_obras"><%= lingua.nav.obras %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/nuestros_productos"><%= lingua.nav.productos %></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

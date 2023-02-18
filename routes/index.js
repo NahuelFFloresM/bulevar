@@ -62,7 +62,6 @@ router.get('/nuestros_productos/pvc/:id', function(req,res,next){
     { $group: { _id: '$subcategoria', items:{$push:'$$ROOT'}}},
     { $sort: { _id: 1 }}
   ]).then(result => {
-    console.log(result);
     res.render('productoinfo',{error: null , data:result});
   })
   .catch(error => {

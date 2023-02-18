@@ -96,6 +96,16 @@ footer{
   margin-right: 15px;
 }
 
+.i-languaje{
+  height: auto;
+  width: 30px;
+}
+
+.i-languaje-deselected{
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
 #navbarCollapseFooter{
   margin-left: -4%;
 }
