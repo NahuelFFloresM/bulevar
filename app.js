@@ -6,6 +6,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var lingua  = require('lingua');
 var engines = require('consolidate');
 const mongoose = require('mongoose');
 // const { Schema } = mongoose;
@@ -26,6 +27,7 @@ var helmet = require('helmet');
 
 // mongoose.connect('mongodb+srv://nahuelbule:UJnbM9mSzN6BJ4mp@cluster0.sgyqf.mongodb.net/bulevard?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.connect(process.env.DB_MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.set('strictQuery', false);
 
 var app = express();
 
@@ -40,8 +42,9 @@ app.use(express.static(__dirname + '/public'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.engine('html', engines.mustache);
-app.set('view engine', 'html');
+// app.engine('html', engines.mustache); 
+// app.set('view engine', 'html');
+app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -50,6 +53,16 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/')));
 
 app.use(compression());
+
+app.use(lingua(app, {
+  defaultLocale: 'es',
+  path: __dirname + '/i18n',
+  cookieOptions: {
+    httpOnly: false,          // if you need access to this cookie from javascript on the client
+    expires: new Date(Date.now() + 24 * 60 * 60 * 1000),  // expire in 1 day instead of 1 year
+    //secure: true              // for serving over https
+}
+}));
 
 // app.use(function (req, res, next) {
 //   res.set('Content-Security-Policy', 'frame-src https://maps.google.com/maps/embed/');
@@ -62,7 +75,8 @@ app.use('/productos',productosRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+  // next(createError(404));
+  throw new Error('Page not Found');
 });
 
 // error handler
@@ -70,10 +84,9 @@ app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error',{error: err});
 });
 
 module.exports = app;
