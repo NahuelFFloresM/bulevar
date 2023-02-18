@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let pvc_container = document.getElementById('pvc');
     let alu_container = document.getElementById('aluminio');
     res_object.forEach(element => {
-      console.log(element);
+      // console.log(element);
       portada = element.portada;
       if (element.portada.length < 10) {portada = '../public/images/logo_normal.png'}
       else {portada ='../public/images/'+element.portada}
