@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="icon" type="image/x-icon" href="assets/favicon_icon.png">
+    <link rel="icon" type="image/x-icon" href="/public/assets/favicon_icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
@@ -37,42 +37,15 @@
         </div>
       </div>
       <!-- Categorías-->
-      <h2 class="fw-bold mt-5" id="categoria_title"></h2>
-        <% if (data == ''){ %>
-          <h4 class="mb-4 mt-5">
-            Actualmente no contamos con este producto todavia, estamos trabajando en ello.
-          </h4>
-        <% }; %>
-        <% if (data != ''){ %>
-          <% data.forEach(function(cate){ %>
-            <h4 class="mb-4 mt-5">
-              <%= cate._id %>
-            </h4>
-            <% cate.items.forEach(function(item){ %>
-              
-            <div class="row mt-3">
-              <div class="col-lg-12">
-                <div class="product-container d-flex">
-                  <div class="col-lg-4">
-                    <img src="/public/assets/<%= item.portada %>" class="img-fluid h-100" alt="">
-                  </div>
-                  <div class="col-lg-8">
-                    <div class="product-data-container p-4">
-                      <h4><%= item.descripcion_corta %></h4>
-                      <p><%= item.descripcion %></p>
-                      <ul class="product-list">
-                        <li><%= item.propiedades[0] %></li>
-                        <li><%= item.propiedades[1] %></li>
-                        <li><%= item.propiedades[2] %></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <% }); %>
-          <% }); %>
-        <% } %>
+      <% if (data == ''){ %>
+        <h4 class="mb-4 mt-5">
+          Actualmente no contamos con este producto todavia, estamos trabajando en ello.
+        </h4>
+      <% }; %>
+      <% if (data != ''){ %>
+        <h2 class="fw-bold mt-5 text-capitalize" id="categoria_title"><%= data[0].items[0].tipo %> / <%= data[0].items[0].categoria %></h2>
+        <%- include('./productosimple.ejs', {data: data, lang: lingua.navigation.ingles}); %>
+      <% } %>
 
       <div class="i-top-container">
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-arrow-up-square-fill i-top color-principal" viewBox="0 0 16 16" id="btn-to-top">

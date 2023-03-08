@@ -11,7 +11,7 @@ const Productos = productoSchema;
 
 
 //---- RUTAS
-// Obtener las obras para mostrado general de todas de ellas
+// Obtener los productos para mostrado general de todas de ellos
 router.get('/',async function(req,res,next){
   Productos.find({},'_id ubicacion nombre portada tipo',function(err,items){
     if(err){

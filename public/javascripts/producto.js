@@ -1,9 +1,9 @@
-const outvars = window.location.href.split('?');
-const path_url = outvars[0].split('/');
-let subcat = path_url.pop();
-let cat = path_url.pop();
-if (subcat === 'frente' ) subcat = 'frente integral';
-document.getElementById('categoria_title').innerHTML = cat.toUpperCase()+" / "+subcat.toUpperCase(); 
+// const outvars = window.location.href.split('?');
+// const path_url = outvars[0].split('/');
+// let subcat = path_url.pop();
+// let cat = path_url.pop();
+// if (subcat === 'frente' ) subcat = 'frente integral';
+// document.getElementById('categoria_title').innerHTML = cat.toUpperCase()+" / "+subcat.toUpperCase(); 
 
 document.addEventListener("DOMContentLoaded", function() {
   

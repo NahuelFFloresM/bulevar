@@ -43,9 +43,18 @@ header{
   object-fit: cover;
 }
 
+.img-holder{
+  transition: 1s;
+}
+
+.img-holder:hover{
+  scale: 1.1;
+}
+
 .galery-box{
   max-height: 40vh;
   overflow: hidden;
+  z-index: 2;
 }
 
 .img-portada{
@@ -61,3 +70,4 @@ header{
   right: 0;
   left: 0;
 }
+

@@ -7,6 +7,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var lingua  = require('lingua');
+const cors = require('cors');
 var engines = require('consolidate');
 const mongoose = require('mongoose');
 // const { Schema } = mongoose;
@@ -32,7 +33,18 @@ mongoose.set('strictQuery', false);
 var app = express();
 
 // const nonce = crypto.randomBytes(16).toString('hex');
-app.use(helmet());
+app.use(helmet(
+  {
+    contentSecurityPolicy: {
+      directives: {
+        ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+        "img-src": ["'self'", "ebaproyect.s3.sa-east-1.amazonaws.com"],
+      },
+    },
+  }
+));
+
+app.use(cors());
 
 // cf24ef80af08a52500a7a4eb189957883a8453b45e166d8faf808e0451c5510c
 
@@ -42,8 +54,6 @@ app.use(express.static(__dirname + '/public'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-// app.engine('html', engines.mustache); 
-// app.set('view engine', 'html');
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
@@ -58,26 +68,21 @@ app.use(lingua(app, {
   defaultLocale: 'es',
   path: __dirname + '/i18n',
   cookieOptions: {
-    httpOnly: false,          // if you need access to this cookie from javascript on the client
+    httpOnly: true,          // if you need access to this cookie from javascript on the client
     expires: new Date(Date.now() + 24 * 60 * 60 * 1000),  // expire in 1 day instead of 1 year
     //secure: true              // for serving over https
 }
 }));
-
-// app.use(function (req, res, next) {
-//   res.set('Content-Security-Policy', 'frame-src https://maps.google.com/maps/embed/');
-//   next();
-// });
 
 app.use('/', indexRouter);
 app.use('/obras', obrasRouter);
 app.use('/productos',productosRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  // next(createError(404));
-  throw new Error('Page not Found');
-});
+// app.use(function(req, res, next) {
+//   next(createError(404));
+//   // throw new Error('Page not Found');
+// });
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -86,7 +91,9 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
   // render the error page
   res.status(err.status || 500);
+  console.log(err);
   res.render('error',{error: err});
 });
+
 
 module.exports = app;
