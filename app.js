@@ -44,9 +44,10 @@ app.use(helmet(
   }
 ));
 
-app.use(cors());
-
 // cf24ef80af08a52500a7a4eb189957883a8453b45e166d8faf808e0451c5510c
+app.use(cors({
+  origin: ['https://eba-proyect.onrender.com/', 'https://ebaproyect.s3.sa-east-1.amazonaws.com/']
+}));
 
 
 app.use(express.static(__dirname + '/node_modules/bootstrap/dist'));
